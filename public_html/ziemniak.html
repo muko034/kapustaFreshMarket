@@ -1,0 +1,84 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gra</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+        <meta name="viewport" content="width=device-width, 
+              user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />        
+        <link rel="stylesheet" href="css/kapusta.css" />
+        
+    </head>
+    <body>
+        <div id="test"></div>
+        <img id="loader" src="imgs/loader.gif" style="display: none">
+        <img id="sprayerImg1" src="imgs/sprayer(1).png" style="display:none" onclick="alert();">
+        <img id="sprayerImg2" src="imgs/sprayer(2).png" style="display:none">
+        <img id="sprite" src="imgs/sprite_ziemniak.png" style="display:none" class="ajaxLoader">
+        <div id="playButton" class="button" onclick="CFG.onPlayButtonClick();"></div>
+        <div id="tryButton" class="button" onclick="CFG.onTryButtonClick();"></div>
+        <div id="rankingButton" class="button" onclick="CFG.onRankingButtonClick();"></div>
+        <div id="instructionButton" class="button" onclick="CFG.onInstructionButtonClick();"></div>
+        <div id="ranking" class="area">
+            <h1 style="text-align: center;"><u>Ranking</u></h1>
+            <table align="left">
+                <tr>
+                    <td>1.</td><td>Waldi</td><td align="right">9999999</td>
+                </tr>
+                <tr>
+                    <td>2.</td><td>Olin</td><td align="right">9999498</td>
+                </tr>
+                <tr>
+                    <td>3.</td><td>Muko</td><td align="right">9999156</td>
+                </tr>
+                <tr>
+                    <td>4.</td><td>Sheldon</td><td align="right">9999154</td>
+                </tr>
+                <tr>
+                    <td>5.</td><td>Noname</td><td align="right">9994239</td>
+                </tr>
+            </table>
+        </div>
+        <div id="xButton" onclick="CFG.onXButtonCkick();"></div>
+        <div id="instruction" class="area">
+            <h1 style="text-align: center;"><u>Instrukcje</u></h1>
+            <p style="margin: 20px;">
+                Dokładnie opryskaj uprawę kapusty i uzyskaj maksymalną ilośc punktów.
+            </p>
+        </div>
+        <div id="gameOver" class="area">
+            <h1 style="margin-left: 70px"><u>Game Over</u></h1>
+            <p id="scores"></p>
+            <p id="rank"></p>
+            <table align="left" style="background: #FFF4CE; border-radius: 10px">
+                <tr>
+                    <td style="font-size: 20px">Top 3:</td>
+                </tr>
+                <tr>
+                    <td>1.</td><td>Waldi</td><td align="right">9999999</td>
+                </tr>
+                <tr>
+                    <td>2.</td><td>Olin</td><td align="right">9999498</td>
+                </tr>
+                <tr>
+                    <td>3.</td><td>Muko</td><td align="right">9999156</td>
+                </tr>
+            </table>  
+        </div>
+        <div id="returnButton" onclick="CFG.returnToMenu();" ></div>
+        <div id="exitButton" onclick="CFG.exit();"></div>
+        <div id="replayButton" class="button" onclick="CFG.replay();"></div>
+        <canvas id="canvas" class="canvasLoader" >
+                Twoja przeglądarka nie obsługuje elementu canvas standardu HTML5
+        </canvas>
+        <script type="text/javascript" src="js/libs/jquery-1.9.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery.canvas-loader.js"></script>
+        <script type="text/javascript" src="js/ziemniak.js"></script>
+    </body>
+</html>
